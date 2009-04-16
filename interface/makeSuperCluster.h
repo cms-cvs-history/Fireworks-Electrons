@@ -16,11 +16,12 @@
 //
 // Original Author:  Chris Jones
 //         Created:  Fri Dec  5 15:32:20 EST 2008
-// $Id: makeSuperCluster.h,v 1.1 2008/12/05 20:57:15 chrjones Exp $
+// $Id: makeSuperCluster.h,v 1.2 2009/01/23 21:35:45 amraktad Exp $
 //
 
 // system include files
 #include "DataFormats/EgammaReco/interface/SuperCluster.h"
+#include "DataFormats/EgammaReco/interface/SuperClusterFwd.h"
 
 // user include files
 

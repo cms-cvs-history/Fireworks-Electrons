@@ -10,7 +10,7 @@
 //     views.  The only difference between the two detail views is
 //     whether the track intersections need to be drawn.
 //
-// $Id: FWElectronDetailView.h,v 1.6 2009/03/31 20:46:49 jmuelmen Exp $
+// $Id: FWECALDetailView.h,v 1.1 2009/03/31 23:27:20 jmuelmen Exp $
 //
 
 #include "DataFormats/DetId/interface/DetId.h"
@@ -40,7 +40,7 @@ protected:
 			   TEveElementList *);
      virtual class TEveElementList *makeLabels (const T &) = 0;
      
-     void fillData (const std::vector<DetId> &detids,
+     void fillData (const std::vector< std::pair<DetId, float> > &detids,
 		    TEveCaloDataVec *data, 
 		    double phi_seed);
      void getEcalCrystalsEndcap (std::vector<DetId> *, 
@@ -56,7 +56,7 @@ protected:
      const EcalRecHitCollection *m_barrel_hits;
      const EcalRecHitCollection *m_endcap_hits;
      const EcalRecHitCollection *m_endcap_reduced_hits;
-     std::vector<DetId> seed_detids;
+     std::vector< std::pair<DetId, float> > seed_detids;
 };
 
 #include "FWECALDetailView.icc"
